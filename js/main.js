@@ -9,13 +9,6 @@ game = {
   letras_usada: [],
 }
 
-
-for (let i = 0; i < palavra.palavra.length; i++) {
-  document.querySelector("#local-palavra").innerHTML += '<div class="letra" id="index'+[i]+'"></div>'
-}
-
-document.querySelector("#dica").innerHTML = palavra.dica
-
 function tentativa() {
   game.tentativas--
 

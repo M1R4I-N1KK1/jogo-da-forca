@@ -15,67 +15,70 @@
 <body>
 	<div class="container">
 		<div class="display">
-			<canvas id="tela" width="300" height="200"></canvas>
-			
+			<div class="personagem">
+				<canvas id="tela" width="80" height="160"></canvas>
+			</div>
+
 			<div id="dicas">
 				Dica:
 				<div id="dica"></div>
 			</div>
-			
-			<div id="local-palavra"></div>
+		</div>
 
-			<div class="keyboard">
-				<div class="teclado">
-					<section class="tecla">
-						<button class="key" id="a" onclick="verificar('a')">A</button>
-						<button class="key" id="b" onclick="verificar('b')">B</button>
-						<button class="key" id="c" onclick="verificar('c')">C</button>
-						<button class="key" id="d" onclick="verificar('d')">D</button>
-						<button class="key" id="e" onclick="verificar('e')">E</button>
-						<button class="key" id="f" onclick="verificar('f')">F</button>
-						<button class="key" id="g" onclick="verificar('g')">G</button>
-						<button class="key" id="h" onclick="verificar('h')">H</button>
-						<button class="key" id="i" onclick="verificar('i')">I</button>			
-					</section>
+		<div id="local-palavra"></div>
 
-					<section class="tecla">
-						<button class="key" id="j" onclick="verificar('j')">J</button>
-						<button class="key" id="k" onclick="verificar('k')">K</button>
-						<button class="key" id="l" onclick="verificar('l')">L</button>
-						<button class="key" id="m" onclick="verificar('m')">M</button>
-						<button class="key" id="n" onclick="verificar('n')">N</button>
-						<button class="key" id="o" onclick="verificar('o')">O</button>
-						<button class="key" id="p" onclick="verificar('p')">P</button>
-						<button class="key" id="q" onclick="verificar('q')">Q</button>
-						<button class="key" id="r" onclick="verificar('r')">R</button>
-					</section>
+		<div class="keyboard">
+			<div class="teclado">
+				<section class="tecla">
+					<button class="key" id="a" onclick="verificar('a')">A</button>
+					<button class="key" id="b" onclick="verificar('b')">B</button>
+					<button class="key" id="c" onclick="verificar('c')">C</button>
+					<button class="key" id="d" onclick="verificar('d')">D</button>
+					<button class="key" id="e" onclick="verificar('e')">E</button>
+					<button class="key" id="f" onclick="verificar('f')">F</button>
+					<button class="key" id="g" onclick="verificar('g')">G</button>
+					<button class="key" id="h" onclick="verificar('h')">H</button>
+					<button class="key" id="i" onclick="verificar('i')">I</button>			
+				</section>
 
-					<section class="tecla">
-						<button class="key" id="s" onclick="verificar('s')">S</button>
-						<button class="key" id="t" onclick="verificar('t')">T</button>
-						<button class="key" id="u" onclick="verificar('u')">U</button>
-						<button class="key" id="v" onclick="verificar('v')">V</button>
-						<button class="key" id="w" onclick="verificar('w')">W</button>
-						<button class="key" id="x" onclick="verificar('x')">X</button>
-						<button class="key" id="y" onclick="verificar('y')">Y</button>
-						<button class="key" id="z" onclick="verificar('z')">Z</button>
-					</section>
-				</div>
-			</div>
+				<section class="tecla">
+					<button class="key" id="j" onclick="verificar('j')">J</button>
+					<button class="key" id="k" onclick="verificar('k')">K</button>
+					<button class="key" id="l" onclick="verificar('l')">L</button>
+					<button class="key" id="m" onclick="verificar('m')">M</button>
+					<button class="key" id="n" onclick="verificar('n')">N</button>
+					<button class="key" id="o" onclick="verificar('o')">O</button>
+					<button class="key" id="p" onclick="verificar('p')">P</button>
+					<button class="key" id="q" onclick="verificar('q')">Q</button>
+					<button class="key" id="r" onclick="verificar('r')">R</button>
+				</section>
 
-			<div class="menu">
-				<section>
-					<div id="msg"></div>
-					
-					<span>
-						Modo: Solo
-					</span>
-										
-					<button onclick="start()">Inicia</button>
-					
+				<section class="tecla">
+					<button class="key" id="s" onclick="verificar('s')">S</button>
+					<button class="key" id="t" onclick="verificar('t')">T</button>
+					<button class="key" id="u" onclick="verificar('u')">U</button>
+					<button class="key" id="v" onclick="verificar('v')">V</button>
+					<button class="key" id="w" onclick="verificar('w')">W</button>
+					<button class="key" id="x" onclick="verificar('x')">X</button>
+					<button class="key" id="y" onclick="verificar('y')">Y</button>
+					<button class="key" id="z" onclick="verificar('z')">Z</button>
 				</section>
 			</div>
 		</div>
+
+		<div class="menu">
+			<section>
+				<div id="msg"></div>
+				
+				<span>
+					Modo: Solo
+				</span>
+									
+				<button onclick="start()">Inicia</button>
+				
+			</section>
+		</div>
+	</div>
 
 	</div>
 </body>
