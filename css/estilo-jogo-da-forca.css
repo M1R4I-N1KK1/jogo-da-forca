@@ -57,8 +57,8 @@ body{
 #local-palavra {
 	display: inline-flex;
 	position: absolute;
-	top: 153px;
-	left: 35px;
+	top: 105px;
+	left: 70px;
 }
 
 .teclado button {
@@ -66,7 +66,7 @@ body{
 	border-radius: 8px;
 	width: 35px;
 	height: 35px;
-	font-weight: 900;
+	font-weight: 1000;
 	font-size: 18px;
 	font-family: 'Maria Lucia', sans-serif;
 }
@@ -104,20 +104,22 @@ body{
 .enforcado {
 	font-family: 'Another Danger Slanted', sans-serif;
 	color: darkred;
-	text-shadow: black 0.1em 0.1em 0.2em
+	text-shadow: black 0.1em 0.1em 0.2em;
+	font-size: 2.5rem;
+	
 }
 
 .ganhou {
 	font-family: 'Ancient Ad', sans-serif;
 	color: goldenrod;
-	text-shadow: black 0.1em 0.1em 0.3em
+	text-shadow: black 0.1em 0.1em 0.3em;
 }
 
 #dicas {
 	display: flex;
 	position: absolute;
-	top: 70px;
-	left: 18rem;
+	top: 1rem;
+	left: 30rem;
 }
 
 #dica {
@@ -130,21 +132,22 @@ body{
 	background-size: cover;
 }
 
-canvas{
-	min-width: 400px;
-  border: 1px green solid;
-}
-
-
 .menu {
-	display: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	position: absolute;
-	top: 40px;
-	left: 40px;
+	top: 50%;
+	left: 50%;
 	width: 300px;
 	height: 300px;
+	border-radius: 10px;
+	transform: translate(-50%, -50%);
 	border: 1px rebeccapurple solid;
-	background: #B1EBFF;
+	background: url("../img/bg-menu2.jpg") ;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 
 .menu section {
