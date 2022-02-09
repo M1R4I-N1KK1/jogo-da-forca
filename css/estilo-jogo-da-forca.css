@@ -1,0 +1,152 @@
+
+@font-face {
+    font-family: 'Another Danger Slanted';
+    src: url('../fonts/Another Danger Slanted - Demo.otf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Maria Lucia';
+    src: url('../fonts/Maria_lucia.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Ancient Ad';
+    src: url('../fonts/Ancient Ad.ttf') format("truetype");
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.display {
+	max-width: 1200px;
+	max-height: 800px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 1px red solid;
+}
+
+.letra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width: 30px;
+	height: 30px;
+	margin: 10px 2px 2px 2px;
+	padding: 1px;
+	border-bottom: 5px gray solid;
+	font-weight: bold;
+}
+
+#local-palavra {
+	display: inline-flex;
+	position: absolute;
+	top: 153px;
+	left: 35px;
+}
+
+.teclado button {
+	margin: 3px;
+	border-radius: 8px;
+	width: 35px;
+	height: 35px;
+	font-weight: 900;
+	font-size: 18px;
+	font-family: 'Maria Lucia', sans-serif;
+}
+
+.tecla {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.clicado, .clicado-tem {
+	color: white;
+}
+
+.clicado {
+	background-color: red;
+}
+
+.clicado-tem {
+	background: green;
+}
+
+.teclado {
+	border: 1px red solid;
+	margin: 100px 4px 4px 4px;
+}
+
+#msg {
+	display: flex;
+	justify-content: center;
+	margin: 1.5em 10px;
+	font-size: 2rem;
+}
+
+.enforcado {
+	font-family: 'Another Danger Slanted', sans-serif;
+	color: darkred;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.ganhou {
+	font-family: 'Ancient Ad', sans-serif;
+	color: goldenrod;
+	text-shadow: black 0.1em 0.1em 0.3em
+}
+
+#dicas {
+	display: flex;
+	position: absolute;
+	top: 70px;
+	left: 18rem;
+}
+
+#dica {
+	margin-left: 5px;
+}
+
+.bg-fundo {
+	background: url('../img/bg-forca.jpg');
+	background-repeat: repeat-y;
+	background-size: cover;
+}
+
+canvas{
+	min-width: 400px;
+  border: 1px green solid;
+}
+
+
+.menu {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	width: 300px;
+	height: 300px;
+	border: 1px rebeccapurple solid;
+	background: #B1EBFF;
+}
+
+.menu section {
+	position: relative;
+}

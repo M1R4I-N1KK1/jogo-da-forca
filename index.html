@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/estilo-jogo-da-forca.css">
+	<script src="js/main.js" defer></script>
+	<script src="js/personagem.js" defer></script>
+	<title>Jogo da Forca</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="display">
+			<canvas id="tela"></canvas>
+			
+			<div id="dicas">
+				Dica:
+				<div id="dica"></div>
+			</div>
+			<div id="local-palavra"></div>
+
+			<div class="keyboard">
+				<div class="teclado">
+					<section class="tecla">
+						<button id="a" onclick="verificar('a')">A</button>
+						<button id="b" onclick="verificar('b')">B</button>
+						<button id="c" onclick="verificar('c')">C</button>
+						<button id="d" onclick="verificar('d')">D</button>
+						<button id="e" onclick="verificar('e')">E</button>
+						<button id="f" onclick="verificar('f')">F</button>
+						<button id="g" onclick="verificar('g')">G</button>
+						<button id="h" onclick="verificar('h')">H</button>
+						<button id="i" onclick="verificar('i')">I</button>			
+					</section>
+
+					<section class="tecla">
+						<button id="j" onclick="verificar('j')">J</button>
+						<button id="k" onclick="verificar('k')">K</button>
+						<button id="l" onclick="verificar('l')">L</button>
+						<button id="m" onclick="verificar('m')">M</button>
+						<button id="n" onclick="verificar('n')">N</button>
+						<button id="o" onclick="verificar('o')">O</button>
+						<button id="p" onclick="verificar('p')">P</button>
+						<button id="q" onclick="verificar('q')">Q</button>
+						<button id="r" onclick="verificar('r')">R</button>
+					</section>
+
+					<section class="tecla">
+						<button id="s" onclick="verificar('s')">S</button>
+						<button id="t" onclick="verificar('t')">T</button>
+						<button id="u" onclick="verificar('u')">U</button>
+						<button id="v" onclick="verificar('v')">V</button>
+						<button id="w" onclick="verificar('w')">W</button>
+						<button id="x" onclick="verificar('x')">X</button>
+						<button id="y" onclick="verificar('y')">Y</button>
+						<button id="z" onclick="verificar('z')">Z</button>
+					</section>
+				</div>
+			</div>
+
+			<div class="menu">
+				<section>
+					<div id="msg"></div>
+					<p>
+						ahdhsgdasygodas
+					</p>
+				</section>
+			</div>
+		</div>
+
+
+	</div>
+</body>
+
+</html>
