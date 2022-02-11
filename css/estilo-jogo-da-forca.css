@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: 'Maria Lucia';
-    src: url('../fonts/Maria_lucia.ttf') format("truetype");
+    font-family: 'Old Newspaper Types';
+    src: url('../fonts/OldNewspaperTypes.ttf') format("truetype");
 }
 
 @font-face {
@@ -52,12 +52,13 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	margin: 10px 2px 2px 2px;
 	padding: 1px;
 	border-bottom: 5px gray solid;
-	font-weight: bold;
+	font-size: 1.8rem;
+	font-family: 'Old Newspaper Types', sans-serif;
 }
 
 #local-palavra {
@@ -69,9 +70,8 @@ body{
 	border-radius: 8px;
 	width: 35px;
 	height: 35px;
-	font-weight: 600;
 	font-size: 18px;
-	font-family: 'Maria Lucia', sans-serif;
+	font-family: 'Old Newspaper Types', sans-serif;
 }
 
 .tecla {

@@ -6,42 +6,42 @@ const personagem = {
 	cor: "#1f1f1f",
 
 	braco_direito: {
-		x1: "58",
+		x1: "80",
 		y1: "60",
-		x2: "45",
-		y2: "90",
+		x2: "67",
+		y2: "100",
 	},
 
 	braco_esquedo: {
-		x1: "58",
+		x1: "80",
 		y1: "60",
-		x2: "75",
-		y2: "90",
+		x2: "97",
+		y2: "100",
 	},
 
 	perna_esqueda: {
-		x1: "58",
-		y1: "90",
-		x2: "75",
-		y2: "120",
+		x1: "80",
+		y1: "120",
+		x2: "97",
+		y2: "160",
 	},
 
 	perna_direita: {
-		x1: "58",
-		y1: "90",
-		x2: "45",
-		y2: "120",
+		x1: "80",
+		y1: "120",
+		x2: "67",
+		y2: "160",
 	},
 
 	tronco: {
-		x1: "58",
+		x1: "80",
 		y1: "60",
-		x2: "58",
-		y2: "90",
+		x2: "80",
+		y2: "120",
 	},
 
 	cabeca: {
-		x1: "58",
+		x1: "80",
 		y1: "45",
 		x2: "16",
 		y2: "0",
@@ -131,12 +131,13 @@ function estrutura(x1, y1, x2, y2, espessura = "3", cor = "#771601") {
 
 function forca() {
 	// corda da forca
-	estrutura(58, 10, 58, 28, 3, "#6c6c6c")
+	estrutura(80, 10, 80, 28, 3, "#6c6c6c")
 	// haste de sustentancao da parte superior e lateral
 	estrutura(10, 40, 35, 10, 4, "#a96a0c")
-	// parte lateral e superior
-	estrutura(10, 10, 10, 145, 10, "#804d00")
-	estrutura(5, 10, 60, 10, 7, "#804d00")
+	// parte lateral
+	estrutura(10, 10, 10, 200, 10, "#804d00")
+	// parte superior
+	estrutura(5, 10, 85, 10, 7, "#804d00")
 };
 
 forca();
