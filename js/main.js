@@ -10,7 +10,7 @@ game = {
 }
 
 function tentativa() {
-  game.tentativas--
+	game.tentativas--		
 
   if (game.tentativas == 5) {
     pCabeca();
@@ -34,7 +34,7 @@ function tentativa() {
 
   if (game.tentativas == 0) {
     pPernaDireita();
-  };
+  };        	
 
 };
 
