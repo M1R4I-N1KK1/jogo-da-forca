@@ -1,5 +1,6 @@
 var tela = document.querySelector('#tela');
 var ctx = tela.getContext('2d');
+
 const personagem = {
 	espessura: "3",
 	cor: "#1f1f1f",

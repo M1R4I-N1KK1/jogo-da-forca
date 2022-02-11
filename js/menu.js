@@ -10,16 +10,18 @@ function limparTeclado(){
 	document.querySelectorAll("button").classList.add('clicado');
 };
 
-function restart(){
+function proximo(){
 	limparTeclado();
-	limparAtributo();	
+	limparAtributo();
 	removerPersonagem();
-	removerElemento();	
+	removerElemento();
+	geraPalavra();
 	criarElemento();
 };
 
 function start(){
-	limparAtributo();	
+	limparAtributo();
+	geraPalavra();
 	criarElemento();
 }
 

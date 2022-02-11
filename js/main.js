@@ -1,7 +1,14 @@
+var dicas = document.querySelector("#dica");
+
+var palavras = {
+  fruta: ["uva", "laranja", "graviola", "limao"],
+  animal: ["peru", "jumento", "cobra"],
+  pais: ["bolivia",  "brasil", "china"],
+}
+
 var palavra = {
-  palavra: "uva",
-  dica: "Fruta"
-};
+  palavra: "",
+}
 
 game = {
   saida: [],
@@ -9,8 +16,18 @@ game = {
   letras_usada: [],
 }
 
+function geraPalavra() {
+  let chaves = Object.keys(palavras);
+  let dica = chaves[Math.floor(Math.random() * chaves.length)]
+  let index = palavras[dica];
+  let item =  index[Math.floor(Math.random() * index.length)]
+
+  palavra.palavra = item
+  dicas.innerHTML = dica
+}
+
 function tentativa() {
-	game.tentativas--		
+	game.tentativas--
 
   if (game.tentativas == 5) {
     pCabeca();
@@ -43,6 +60,7 @@ function verificarLetra(letras) {
     if (palavra.palavra[i] == letras) {
       document.querySelector("#index"+[i]).innerHTML = palavra.palavra[i].toUpperCase();
       game.saida[i] = palavra.palavra[i]
+      
       if (game.saida.includes(letras)) {
         document.querySelector("#"+letras).classList.add("clicado-tem");
       }
