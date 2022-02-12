@@ -6,10 +6,6 @@ function removerPersonagem(){
 	forca()
 };
 
-function limparTeclado(){
-	document.querySelectorAll("button").classList.add('clicado');
-};
-
 function proximo(){
 	limparTeclado();
 	limparAtributo();
@@ -28,7 +24,7 @@ function start(){
 function criarElemento() {
 	for (let i = 0; i < palavra.palavra.length; i++) {
 		let local_letra = document.createElement("div");
-		local_letra.id = "index"+i
+		local_letra.id = "index".concat(i)
 		local_letra.classList.add("letra")
 		local_palavra.appendChild(local_letra);
 		}
@@ -36,7 +32,7 @@ function criarElemento() {
 
 function removerElemento() {
 	for (let i = 0; i < palavra.palavra.length; i++) {
-		let local_letra = document.querySelector("#index"+i);
+		let local_letra = document.querySelector("#index".concat(i));
 		local_letra.remove()
 	}
 }

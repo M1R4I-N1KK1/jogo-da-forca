@@ -1,4 +1,5 @@
-var dicas = document.querySelector("#dica");
+var dicas = document.querySelector("#dicas div");
+var mensagem = document.querySelector("#msg");
 
 var palavras = {
   fruta: ["uva", "laranja", "graviola", "limao"],
@@ -6,11 +7,7 @@ var palavras = {
   pais: ["bolivia",  "brasil", "china"],
 }
 
-var palavra = {
-  palavra: "",
-}
-
-game = {
+var game = {
   saida: [],
   tentativas: 6,
   letras_usada: [],
@@ -22,7 +19,7 @@ function geraPalavra() {
   let index = palavras[dica];
   let item =  index[Math.floor(Math.random() * index.length)]
 
-  palavra.palavra = item
+  var palavra = item
   dicas.innerHTML = dica
 }
 
@@ -56,13 +53,13 @@ function tentativa() {
 };
 
 function verificarLetra(letras) {
-  for (let i = 0; i < palavra.palavra.length; i++) {
-    if (palavra.palavra[i] == letras) {
-      document.querySelector("#index"+[i]).innerHTML = palavra.palavra[i].toUpperCase();
-      game.saida[i] = palavra.palavra[i]
+  for (let i = 0; i < palavra.length; i++) {
+    if (palavra[i] == letras) {
+      document.querySelector("#index"+[i]).innerHTML = palavra[i].toUpperCase();
+      game.saida[i] = palavra[i]
       
       if (game.saida.includes(letras)) {
-        document.querySelector("#"+letras).classList.add("clicado-tem");
+        document.getElementById(letras).classList.add("clicado-tem");
       }
     }
   }
@@ -74,17 +71,17 @@ function verificar(letra) {
   if (!game.letras_usada.includes(entrada)) {
 
     if (game.tentativas > 0) {
-      if (palavra.palavra.includes(entrada)) {
+      if (palavra.includes(entrada)) {
         verificarLetra(entrada);
         game.letras_usada.push(entrada);
       } else {
         tentativa()
-        document.querySelector("#"+letra).classList.add("clicado");
+        document.getElementById(letra).classList.add("clicado");
         game.letras_usada.push(entrada);
       }
     }
 
-    if (game.saida.join("") == palavra.palavra) {
+    if (game.saida.join("") == palavra) {
       ganhouPerdeu(true);
     }
 
@@ -97,13 +94,13 @@ function verificar(letra) {
 
 function ganhouPerdeu(ganhou){
   if(ganhou){
-    document.querySelector(".menu").style.display = 'block';
-    document.querySelector("#msg").innerHTML = "&lt;GANHOU&gt;";
-    document.querySelector("#msg").classList.add('ganhou');
+    menu.style.display = 'block';
+    mensagem.innerHTML = "&lt;GANHOU&gt;";
+    mensagem.classList.add('ganhou');
     game.tentativas = "ganhou";
   }else{
-    document.querySelector(".menu").style.display = 'block';
-    document.querySelector("#msg").innerHTML = "enforcado!!!"
-    document.querySelector("#msg").classList.add('enforcado');
+    menu.style.display = 'block';
+    mensagem.innerHTML = "enforcado!!!"
+    mensagem.classList.add('enforcado');
   }
 };
