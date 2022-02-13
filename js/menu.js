@@ -1,5 +1,17 @@
 var menu = document.querySelector(".menu");
 var local_palavra = document.querySelector("#local-palavra");
+var add_palavra = document.querySelector(".add-palavra");
+var add_texto = document.querySelector("#adicionar-texto");
+var add_tema = document.querySelector("#adicionar-tema");
+
+document.querySelector("#duo").addEventListener("click", function(){
+	add_palavra.style.display = "flex";
+});
+
+document.querySelector("#solo").addEventListener("click", function(){
+	add_palavra.style.display = "none";
+	add_palavra.value = "";
+});
 
 function removerPersonagem(){
 	ctx.clearRect(0, 0, 300, 300);
@@ -19,7 +31,6 @@ function startGame(){
 
 	if (modo[1].checked){
 		adicionarPalavra();
-
 		document.querySelector(".menu").style.display = "none"
 		document.querySelector("#startgame").style.display = "none"
 		document.querySelector("#start").style.display = "block"
@@ -29,7 +40,6 @@ function startGame(){
 
 	if (modo[0].checked){
 		geraPalavra();
-
 		document.querySelector(".menu").style.display = "none"
 		document.querySelector("#startgame").style.display = "none"
 		document.querySelector("#start").style.display = "block"
@@ -68,11 +78,8 @@ function start(){
 }
 
 function adicionarPalavra() {
-	var palavra_adicionada = 'urubu'
-	var tema_palavra = 'animal'
-
-	palavra = palavra_adicionada;
-	dicas.innerHTML = tema_palavra;
+	palavra = add_texto.value;
+	dicas.innerHTML = add_tema.value;
 }
 
 function restart(){

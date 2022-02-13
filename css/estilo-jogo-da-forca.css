@@ -199,8 +199,12 @@ body{
 	margin-bottom: 2.5rem;
 }
 
-.menu #modo label {
-
+.add-palavra{
+	display: none;
+	flex-direction: column;
+	font-size: 2rem;
+	font-family: 'Notepad Regular';
+	margin-bottom: 1rem;
 }
 
 .menu #modo {

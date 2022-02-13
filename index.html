@@ -69,13 +69,21 @@
 			<section>
 				<div id="msg"></div>
 				
-					<div id="modo">
-						<input type="radio" name="modo" value="solo" checked>
-						<label>Solo</label>
+				<div id="modo">
+					<input id="solo" type="radio" name="modo" value="solo" checked>
+					<label>Solo</label>
 
-						<input type="radio" name="modo" value="duo">
-						<label>Duo</label>
-					</div>
+					<input id="duo" type="radio" name="modo" value="duo">
+					<label>Duo</label>
+				</div>
+
+				<div class="add-palavra">
+					<label for="">Palavra:</label>
+					<input id="adicionar-texto" type="text">
+					
+					<label for="">Tema:</label>
+					<input id="adicionar-tema" type="text">
+				</div>
 
 				<div id="btn-game">
 					<button id="startgame" onclick="startGame()">
