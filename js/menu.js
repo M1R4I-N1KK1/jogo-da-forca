@@ -31,7 +31,7 @@ function startGame(){
 
 	document.addEventListener('keypress', (event) => {
 	  const keyName = event.key;
-	  verificar(keyName);
+	  verificar(keyName.toLowerCase());
 
 	}); 
 
@@ -61,7 +61,7 @@ function start(){
 
 	document.addEventListener('keypress', (event) => {
 	  const keyName = event.key;
-	  verificar(keyName);
+	  verificar(keyName.toLowerCase());
 	});
 
 	limparTeclado();
@@ -89,8 +89,8 @@ function start(){
 }
 
 function adicionarPalavra() {
-	palavra = add_texto.value;
-	dicas.innerHTML = add_tema.value;
+	palavra = add_texto.value.toLowerCase();
+	dicas.innerHTML = add_tema.value.toLowerCase();
 }
 
 function restart(){
