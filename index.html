@@ -69,12 +69,31 @@
 			<section>
 				<div id="msg"></div>
 				
-				<span>
-					Modo: Solo
-				</span>
-									
-				<button id="start" onclick="start()">Inicia</button>
-				<button onclick="proximo()">Proximo</button>
+					<div id="modo">
+						<input type="radio" name="modo" value="solo" checked>
+						<label>Solo</label>
+
+						<input type="radio" name="modo" value="duo">
+						<label>Duo</label>
+					</div>
+
+				<div id="btn-game">
+					<button id="startgame" onclick="startGame()">
+						<img src="img/play.svg" alt="start" width="40">
+					</button>
+
+					<button id="start" onclick="start()">
+						<img src="img/play.svg" alt="start" width="40">
+					</button>
+
+					<button id="restart" onclick="restart()">
+						<img src="img/refresh.svg" alt="restart" width="40">
+					</button>
+
+					<button id="proximo" onclick="proximo()">
+						<img src="img/next.svg" alt="proximo" width="40">
+					</button>
+				</div>
 			</section>
 		</div>
 	</div>

@@ -1,29 +1,27 @@
 var dicas = document.querySelector("#dicas div");
 var mensagem = document.querySelector("#msg");
+var palavra;
 
 var palavras = {
   fruta: ["uva", "laranja", "graviola", "limao"],
   animal: ["peru", "jumento", "cobra"],
   pais: ["bolivia",  "brasil", "china"],
-}
+};
 
 var game = {
   saida: [],
   tentativas: 6,
   letras_usada: [],
-}
-
-var palavra;
+};
 
 function geraPalavra() {
   let chaves = Object.keys(palavras);
-  let dica = chaves[Math.floor(Math.random() * chaves.length)]
+  let dica = chaves[Math.floor(Math.random() * chaves.length)];
   let index = palavras[dica];
-  let item =  index[Math.floor(Math.random() * index.length)]
-
+  let item =  index[Math.floor(Math.random() * index.length)];
   palavra = item
   dicas.innerHTML = dica
-}
+};
 
 function tentativa() {
 	game.tentativas--

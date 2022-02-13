@@ -19,6 +19,11 @@
     src: url('../fonts/HitMePunk07.ttf') format("truetype");
 }
 
+@font-face {
+    font-family: 'Notepad Regular';
+    src: url('../fonts/NotepadRegular.ttf') format("truetype");
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -35,9 +40,7 @@ html {
 body{
 	display: flex;
 	justify-content: center;
-	margin: auto;
 	align-items: center;
-
 }
 
 .container {
@@ -151,6 +154,7 @@ body{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	backdrop-filter: blur(3px) saturate(130%)
 }
 
 .menu section{
@@ -160,6 +164,47 @@ body{
 	height: 100%;
 	justify-content: center;
 	flex-direction: column;
+}
+
+#proximo, #start, #restart{
+	width: 40px;
+	height: 40px;
+	border: 0;
+	margin: 5px;
+	display: none;
+}
+
+#startgame {
+	width: 40px;
+	height: 40px;
+	border: 0;
+	margin: 5px;
+	display: block;
+}
+
+.menu #btn-game	{
+	display: inline-flex;
+}
+
+.menu #btn-game button {
+	background-color: transparent;
+}
+
+.menu #modo {
+	display: flex;
+	align-items: center;
+	font-size: 2.2rem;
+	font-weight: 600;
+	font-family: 'Notepad Regular';
+	margin-bottom: 2.5rem;
+}
+
+.menu #modo label {
+
+}
+
+.menu #modo {
+	gap: 1rem;
 }
 
 .personagem {
@@ -174,3 +219,36 @@ body{
 	min-width: 200px;
 }
 
+@media (max-width: 320px) {
+	html {
+		font-size: 50.5%;
+	}
+
+	.letra {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 35px;
+		height: 35px;
+		margin: 8px 2px 2px 2px;
+		padding: 1px;
+		border-bottom: 5px gray solid;
+	}
+
+	.teclado button {
+		border-radius: 8px;
+		width: 28px;
+		height: 28px;
+	}
+
+	.teclado {
+	margin: 50px 4px 4px 4px;
+	}
+
+	.enforcado {
+		font-family: 'Another Danger Slanted', sans-serif;
+		color: darkred;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		font-size: 4.2rem;
+	}
+}

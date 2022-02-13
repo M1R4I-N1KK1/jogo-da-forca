@@ -1,5 +1,5 @@
 var menu = document.querySelector(".menu");
-var local_palavra = document.querySelector("#local-palavra")
+var local_palavra = document.querySelector("#local-palavra");
 
 function removerPersonagem(){
 	ctx.clearRect(0, 0, 300, 300);
@@ -14,13 +14,75 @@ function proximo(){
 	geraPalavra();
 	criarElemento();
 };
+function startGame(){
+	var modo = document.getElementsByName("modo");
+
+	if (modo[1].checked){
+		adicionarPalavra();
+
+		document.querySelector(".menu").style.display = "none"
+		document.querySelector("#startgame").style.display = "none"
+		document.querySelector("#start").style.display = "block"
+		document.querySelector("#restart").style.display = "block"
+		document.querySelector("#proximo").style.display = "none"
+	}
+
+	if (modo[0].checked){
+		geraPalavra();
+
+		document.querySelector(".menu").style.display = "none"
+		document.querySelector("#startgame").style.display = "none"
+		document.querySelector("#start").style.display = "block"
+		document.querySelector("#restart").style.display = "block"
+		document.querySelector("#proximo").style.display = "block"
+	}
+
+	criarElemento()
+}
 
 function start(){
+	var modo = document.getElementsByName("modo");
+
+	limparTeclado();
 	limparAtributo();
-	geraPalavra();
+	removerPersonagem();
+	removerElemento();
+
+	if (modo[1].checked){
+		adicionarPalavra();
+
+		document.querySelector("#start").style.display = "block"
+		document.querySelector("#restart").style.display = "none"
+		document.querySelector("#proximo").style.display = "none"
+	}
+
+	if (modo[0].checked){
+		geraPalavra();
+
+		document.querySelector("#start").style.display = "block"
+		document.querySelector("#restart").style.display = "block"
+		document.querySelector("#proximo").style.display = "block"
+	}
+
 	criarElemento();
-	document.querySelector("#start").style.display = "none"
 }
+
+function adicionarPalavra() {
+	var palavra_adicionada = 'urubu'
+	var tema_palavra = 'animal'
+
+	palavra = palavra_adicionada;
+	dicas.innerHTML = tema_palavra;
+}
+
+function restart(){
+	limparTeclado();
+	limparAtributo();
+	removerPersonagem();
+	removerElemento();
+	criarElemento();
+}
+
 
 function criarElemento() {
 	for (let i = 0; i < palavra.length; i++) {
