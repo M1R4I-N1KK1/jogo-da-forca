@@ -29,6 +29,12 @@ function proximo(){
 function startGame(){
 	var modo = document.getElementsByName("modo");
 
+	document.addEventListener('keypress', (event) => {
+	  const keyName = event.key;
+	  verificar(keyName);
+
+	}); 
+
 	if (modo[1].checked){
 		adicionarPalavra();
 		document.querySelector(".menu").style.display = "none"
@@ -52,6 +58,11 @@ function startGame(){
 
 function start(){
 	var modo = document.getElementsByName("modo");
+
+	document.addEventListener('keypress', (event) => {
+	  const keyName = event.key;
+	  verificar(keyName);
+	});
 
 	limparTeclado();
 	limparAtributo();
