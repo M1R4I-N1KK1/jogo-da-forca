@@ -19,10 +19,11 @@ function start(){
 	limparAtributo();
 	geraPalavra();
 	criarElemento();
+	document.querySelector("#start").style.display = "none"
 }
 
 function criarElemento() {
-	for (let i = 0; i < palavra.palavra.length; i++) {
+	for (let i = 0; i < palavra.length; i++) {
 		let local_letra = document.createElement("div");
 		local_letra.id = "index".concat(i)
 		local_letra.classList.add("letra")
@@ -31,7 +32,7 @@ function criarElemento() {
 }
 
 function removerElemento() {
-	for (let i = 0; i < palavra.palavra.length; i++) {
+	for (let i = 0; i < palavra.length; i++) {
 		let local_letra = document.querySelector("#index".concat(i));
 		local_letra.remove()
 	}
@@ -46,7 +47,7 @@ function limparAtributo() {
 
 function limparTeclado() {
 	for (let letra = 0; letra < game.letras_usada.length; letra++) {
-		document.querySelector("#"+game.letras_usada[letra]).classList.remove("clicado");
-		document.querySelector("#"+game.letras_usada[letra]).classList.remove("clicado-tem");
+		document.getElementById(game.letras_usada[letra]).classList.remove("clicado");
+		document.getElementById(game.letras_usada[letra]).classList.remove("clicado-tem");
 	};
 }

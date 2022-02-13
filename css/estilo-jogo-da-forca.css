@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: 'Another Danger Slanted';
-    src: url('../fonts/Another Danger Slanted - Demo.otf') format("truetype");
+    src: url('../fonts/AnotherDangerSlanted.otf') format("truetype");
 }
 
 @font-face {
@@ -11,7 +11,12 @@
 
 @font-face {
     font-family: 'Ancient Ad';
-    src: url('../fonts/Ancient Ad.ttf') format("truetype");
+    src: url('../fonts/AncientAd.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Hit Me Punk';
+    src: url('../fonts/HitMePunk07.ttf') format("truetype");
 }
 
 * {
@@ -24,6 +29,7 @@ html {
 	width: 100%;
 	height: 100vh;
 	font-size: 62.5%;
+	background: url('../img/bg-fundo-game.png') no-repeat left bottom;
 }
 
 body{
@@ -31,7 +37,7 @@ body{
 	justify-content: center;
 	margin: auto;
 	align-items: center;
-	background: url('../img/bg-fundo-game.svg') no-repeat left bottom;
+
 }
 
 .container {
@@ -42,15 +48,19 @@ body{
 	margin: 2rem;
 	padding: 1rem;
 	display: flex;
-	background: #a48209cc;
+	background: #C6FFF4AA;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	border-radius: 1rem;
+	position: relative;
 }
 
+/* TITULO DO JOGO*/
 .container h1 {
+	font-family: "Hit Me Punk";
 	font-size: 5.2rem;
+	color: #282828;
 }
 
 .letra {
@@ -105,20 +115,21 @@ body{
 	display: flex;
 	justify-content: center;
 	margin: 1.5em 10px;
-	font-size: 2rem;
+	font-size: 4.2rem;
 }
 
 .enforcado {
 	font-family: 'Another Danger Slanted', sans-serif;
 	color: darkred;
 	text-shadow: black 0.1em 0.1em 0.2em;
-	font-size: 2.5rem;
+	font-size: 4.5rem;
 }
 
 .ganhou {
 	font-family: 'Ancient Ad', sans-serif;
 	color: goldenrod;
 	text-shadow: black 0.1em 0.1em 0.3em;
+	font-size: 5rem;
 }
 
 #dicas {
@@ -137,15 +148,18 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row;
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
 }
 
-.menu section {
-	position: relative;
+.menu section{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .personagem {
@@ -159,3 +173,4 @@ body{
 	width: 300px;
 	min-width: 200px;
 }
+

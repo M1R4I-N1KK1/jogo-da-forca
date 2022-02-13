@@ -13,13 +13,15 @@ var game = {
   letras_usada: [],
 }
 
+var palavra;
+
 function geraPalavra() {
   let chaves = Object.keys(palavras);
   let dica = chaves[Math.floor(Math.random() * chaves.length)]
   let index = palavras[dica];
   let item =  index[Math.floor(Math.random() * index.length)]
 
-  var palavra = item
+  palavra = item
   dicas.innerHTML = dica
 }
 
@@ -55,7 +57,7 @@ function tentativa() {
 function verificarLetra(letras) {
   for (let i = 0; i < palavra.length; i++) {
     if (palavra[i] == letras) {
-      document.querySelector("#index"+[i]).innerHTML = palavra[i].toUpperCase();
+      document.querySelector("#index".concat([i])).innerHTML = palavra[i].toUpperCase();
       game.saida[i] = palavra[i]
       
       if (game.saida.includes(letras)) {
